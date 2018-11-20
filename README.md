@@ -34,9 +34,7 @@ Se pide:
 
 2. Armar un test en el que esten las  dos remiserías.
 Los autos de "uver" son: dos Corsa, el negro y el gris fundido; un R12 con el tanque adicional puesto.
-Los autos de "cobifai" son: los restantes.
-
-Hacer asserts sobre cada una, respecto del peso total, si es recomendable o no, la capacidad total yendo a 140 km/h, y el color del auto más rápido.
+Los autos de "cobifai" son: los restantes. Hacer asserts sobre cada una, respecto del peso total, si es recomendable o no, la capacidad total yendo a 140 km/h, y el color del auto más rápido.
 
 3. Agregar al modelo los viajes. De cada viaje nos interesa: los kilómetros, el tiempo máximo de viaje en horas, la cantidad de pasajeros, y también un conjunto de colores incompatibles, o sea, que los pasajeros rechazan hacer el viaje en autos de esos colores.
 Las remiseras solo pueden aceptar un viaje solo si tiene al menos un auto que pueda realizar el viaje. Para que un auto pueda hacer un viaje se tienen que dar tres condiciones: que la velocidad máxima sea al menos 10 km/h mayor a la velocidad promedio que necesita el viaje (que es kilómetros dividido tiempo máximo); que la capacidad del auto dé para la cantidad de pasajeros del viaje; y que el auto no sea de un color incompatible para el viaje.
