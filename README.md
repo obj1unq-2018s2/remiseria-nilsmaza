@@ -5,16 +5,13 @@ De cada vehículo nos van a interesar: capacidad (o sea, cantidad de pasajeros q
 
 ## Considerar estos vehículos:
 
-`Chevrolet Corsa`, La capacidad  es 4 pasajeros en los 3, la velocidad máxima  de 150 km/h y pesan 1300 kg
+* **Chevrolet Corsa**, La capacidad  es 4 pasajeros, la velocidad máxima  de 150 km/h y pesan 1300 kg
 
-Autos `standard` que funcionan a gas, uno de color `gris`y otro verde. Cada uno de ellos puede tener puesto, o no, un tanque adicional. La capacidad de un auto a gas es de 4 pasajeros si no tiene puesto el tanque adicional, o 3 pasajeros si sí lo tiene puesto. La velocidad máxima es 120 km/h con, o 110 km/h sin, tanque adicional. El peso es 1200 kg, más 150 kg adicionales si tiene tanque adicional.
+* **Autos standard** que funcionan a gas, uno de color `gris`y otro verde. Cada uno de ellos puede tener puesto, o no, un tanque adicional. La capacidad de un auto a gas es de 4 pasajeros si no tiene puesto el tanque adicional, o 3 pasajeros si sí lo tiene puesto. La velocidad máxima es 120 km/h con, o 110 km/h sin, tanque adicional. El peso es 1200 kg, más 150 kg adicionales si tiene tanque adicional.
 
-Una `Trafic`, que es reconfigurable, porque se le puede cambiar el interior y el motor. La capacidad de la Trafic es la de su interior, la velocidad máxima la que indique su motor, el peso es 4000 kg más lo que pesen interior y motor, y es de color blanco.
+* **Una Trafic**, que es reconfigurable, porque se le puede cambiar el interior y el motor. La capacidad de la Trafic es la de su interior, la velocidad máxima la que indique su motor, el peso es 4000 kg más lo que pesen interior y motor, y es de color blanco. Prever dos interiores, uno cómodo (capacidad 5, peso 700 kg) y otro popular (capacidad 12, peso 1000 kg). Y dos motores, uno pulenta (velocidad máxima 130 km/h, peso 800 kg) y otro batatón (velocidad máxima 80 km/h, peso 500 kg).
 
-Prever dos interiores, uno cómodo (capacidad 5, peso 700 kg) y otro popular (capacidad 12, peso 1000 kg). Y dos motores, uno pulenta (velocidad máxima 130 km/h, peso 800 kg) y otro batatón (velocidad máxima 80 km/h, peso 500 kg).
-Autos que son todos distintos entre sí, de cada uno hay que especificar capacidad, velocidad máxima, peso y color.
-
-Autos que son todos distintos entre sí, de cada uno hay que especificar capacidad, velocidad máxima, peso y color.
+* **Autos que son todos distintos entre sí**, de cada uno hay que especificar capacidad, velocidad máxima, peso y color.
 
 ## Remiserias 
 
