@@ -1,0 +1,62 @@
+import autos.*
+import remiserias.*
+
+describe "remiserias"{
+	
+	const corsaCachito = new CrevroletCorsa(color = "Rojo")
+	const corsaCachito1 = new CrevroletCorsa(color = "Negro")
+	const corsaCachito2= new CrevroletCorsa(color = "Verde")
+	const autoEstandar = new Standard (color = "Lima",tanqueAdicional = true)
+	const autoCivil = new AutosDistintos (color = "Beige" ,peso =1200 , capacidad = 5,velocMax = 160 )
+	
+	 
+	const autoEstandar1 = new Standard (color = "Lima",tanqueAdicional = true)
+	const autoEstandar2 = new Standard (color = "Lima",tanqueAdicional = false)
+	const autoEstandar3= new Standard (color = "Lima",tanqueAdicional = false)
+	const trafic = new Trafic(color = "Blanco",motorBueno = false, capacidadComodo = true )
+	
+	const remiseriaCachito = new Remiseria( flotaDeAutos = [corsaCachito,corsaCachito1,corsaCachito2,autoEstandar,autoCivil] )
+	
+	const remiseriaOponente = new Remiseria (flotaDeAutos = [corsaCachito,autoEstandar1,autoEstandar2,autoEstandar3,trafic])
+	
+	const viajeA = new Viaje (kmsARecorrer = 30,
+							 tiempoDelViaje = 2,
+							 cantidadDePasajeros =4,
+							 coloresNegados = ["Negro","Rojo"])
+							 
+
+	
+	test "prueba"{
+		
+		assert.equals(6450,remiseriaCachito.pesoTotalFlota())
+		assert.equals(10250,remiseriaOponente.pesoTotalFlota())
+		
+		assert.equals(true,remiseriaCachito.esRecomendable())
+		assert.equals(true,remiseriaOponente.esRecomendable())
+		
+		assert.equals(17,remiseriaCachito.capacidadTotalYendoA(140))
+		assert.equals(4,remiseriaOponente.capacidadTotalYendoA(140))
+		
+		assert.equals("Beige",remiseriaCachito.colorDelAutoMasRapido())
+		assert.equals("Rojo",remiseriaOponente.colorDelAutoMasRapido())
+		
+		//assert.equals(true,viajeA.puedeHacerElViaje(autoCivil))
+		
+		remiseriaCachito.registrarViaje(viajeA)
+		assert.equals(#{viajeA},remiseriaCachito.registroDeViajes())
+		assert.equals(corsaCachito2,viajeA.autoUtilizado())
+		
+		assert.equals(0,remiseriaCachito.numeroDeVijesDe(autoCivil))
+		assert.equals(1,remiseriaCachito.numeroDeVijesDe(corsaCachito2))
+		
+		assert.equals(0,remiseriaCachito.viajesHechoPor(20))
+		assert.equals(1,remiseriaCachito.viajesHechoPor(30))
+		
+		assert.equals(0,remiseriaCachito.lugaresVaciosDeSsperdiciados())
+		
+		assert.equals(90,remiseriaCachito.cuantoHayQuePagarleA(corsaCachito2))
+		assert.equals(0,remiseriaCachito.cuantoHayQuePagarleA(autoCivil))
+		
+	}
+	
+	}
